@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WorldController">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="384.0" fitWidth="512.0" layoutX="1.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="87.0" />
+      <ImageView fx:id="burgerView" fitHeight="99.0" fitWidth="83.0" layoutX="28.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="rabbitView" fitHeight="99.0" fitWidth="83.0" layoutX="300.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="539.0" layoutY="359.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
+      <Button layoutX="376.0" layoutY="359.0" mnemonicParsing="false" onAction="#turnRight" text="Turn right" />
+      <Button layoutX="217.0" layoutY="359.0" mnemonicParsing="false" onAction="#moveForward" text="Go forward" />
+      <Button layoutX="67.0" layoutY="359.0" mnemonicParsing="false" onAction="#turnLeft" text="Turn left" />
+      <MenuButton layoutX="513.0" layoutY="6.0" mnemonicParsing="false" text="pick up">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#pickBurger" text="burger" />
+          <MenuItem mnemonicParsing="false" onAction="#pickRabbit" text="rabbit" />
+        </items>
+      </MenuButton>
+      <MenuButton layoutX="507.0" layoutY="71.0" mnemonicParsing="false" text="put down">
+         <items>
+          <MenuItem mnemonicParsing="false" onAction="#putBurger" text="burger" />
+          <MenuItem mnemonicParsing="false" onAction="#putRabbit" text="rabbit" />
+         </items>
+      </MenuButton>
+      <TextField layoutX="519.0" layoutY="140.0" prefHeight="27.0" prefWidth="79.0" fx:id="x" />
+      <Text layoutX="519.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X(0-400)：" />
+      <Text layoutX="519.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y(0-370)：" />
+      <TextField fx:id="y" layoutX="519.0" layoutY="193.0" prefHeight="27.0" prefWidth="79.0" />
+      <MenuButton layoutX="525.0" layoutY="281.0" mnemonicParsing="false" text="Move">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#moveBurger" text="burger" />
+          <MenuItem mnemonicParsing="false" onAction="#moveRabbit" text="rabbit" />
+        </items>
+      </MenuButton>
+      <Button layoutX="531.0" layoutY="229.0" mnemonicParsing="false" onAction="#getCoordinate" text="Submit" />
+   </children>
+</AnchorPane>
